@@ -14,6 +14,7 @@ namespace WebSocketClient
                     ws.Close();
 
                 ws.Connect();
+                ws.Send("{\"Type\":\"IsReady\",\"test\":\"test\"}");
                 while (true)
                 {
                     ws.Send(Console.ReadLine());

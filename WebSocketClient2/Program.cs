@@ -14,6 +14,7 @@ namespace WebSocketClient2
                     ws.Close();
                 
                 ws.Connect();
+                ws.Send("{\"Controller\":\"ClientController\",\"Method\":\"HelloWorld\"}");
                 while (true)
                 {
                     ws.Send(Console.ReadLine());
