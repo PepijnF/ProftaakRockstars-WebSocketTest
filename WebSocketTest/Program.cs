@@ -37,6 +37,7 @@ namespace WebSocketTest
                 socket.OnClose = () =>
                 {
                     User user = connections.Find(u => u.Id == socket.ConnectionInfo.Id);
+                    connections.Remove(user);
                     Console.WriteLine(user.Username + " Disconnected");
                 };
             });
